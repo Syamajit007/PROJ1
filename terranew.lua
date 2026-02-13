@@ -24,8 +24,8 @@ resource "aws_lb" "web_lb" {
 
 resource "aws_lb_target_group" "web_target_group" {
   name        = "web-target-group"
-  port        = 80
-  protocol    = "HTTP"
+  port        = 443
+  protocol    = "HTTPS"
   vpc_id      = "vpc-xxxxxxxx" # Replace with your VPC ID
   target_type = "instance"
 }
